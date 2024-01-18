@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  
+  <h2>Planilla de Estudiantes</h2>
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre">
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido">
+
+  <h3>Materias y Notas:</h3>
+
+  <label for="materia1">Materia 1:</label>
+  <input type="text" id="nombreMateria1" placeholder="Nombre de la Materia">
+  <input type="number" id="notaMateria1" min="0" max="10">
+  <br>
+
+  <label for="materia2">Materia 2:</label>
+  <input type="text" id="nombreMateria2" placeholder="Nombre de la Materia">
+  <input type="number" id="notaMateria2" min="0" max="10">
+  <br>
+
+  <label for="materia3">Materia 3:</label>
+  <input type="text" id="nombreMateria3" placeholder="Nombre de la Materia">
+  <input type="number" id="notaMateria3" min="0" max="10">
+  <br>
+
+  <label for="materia4">Materia 4:</label>
+  <input type="text" id="nombreMateria4" placeholder="Nombre de la Materia">
+  <input type="number" id="notaMateria4" min="0" max="10">
+  <br>
+
+  <label for="materia5">Materia 5:</label>
+  <input type="text" id="nombreMateria5" placeholder="Nombre de la Materia">
+  <input type="number" id="notaMateria5" min="0" max="10">
+  <br>
+
+  <button onclick="agregarEstudiante()">Agregar Estudiante</button>
+  <button onclick="borrarLocalStorage()">Borrar localStorage</button>
+
+  <h3>Lista de Estudiantes:</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th onclick="ordenarTabla('nombre')">Nombre</th>
+        <th onclick="ordenarTabla('apellido')">Apellido</th>
+        <th onclick="ordenarTabla('materia1')">Materia 1</th>
+        <th onclick="ordenarTabla('materia2')">Materia 2</th>
+        <th onclick="ordenarTabla('materia3')">Materia 3</th>
+        <th onclick="ordenarTabla('materia4')">Materia 4</th>
+        <th onclick="ordenarTabla('materia5')">Materia 5</th>
+        <th onclick="ordenarTabla('promedio')">Promedio</th>
+      </tr>
+    </thead>
+    <tbody id="tablaEstudiantes" onclick="seleccionarEstudiante(event)">
+    </tbody>
+  </table>
+
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
